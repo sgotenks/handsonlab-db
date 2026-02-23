@@ -137,7 +137,7 @@ export function createTag(tag, attributes, children) {
  * @param {Element} main The container element
  */
 function buildHeroBlock(main) {
-  if (getMetadata('autoblock') === 'false') return;
+  if (getMetadata('autoblock') === 'false' || main.className === 'sidekick-library') return;
   const h1 = main.querySelector('h1');
   const content = document.createElement('div');
   content.classList.add('hero-content');
